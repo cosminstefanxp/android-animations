@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             // Otherwise, start the animation
             startAnimationViaViewPropertyAnimator();
+//            startAnimationViaObjectAnimator();
 //            startAnimationViaTransition();
             isAnimationStarted = true;
         }
@@ -52,6 +53,10 @@ public class MainActivity extends AppCompatActivity {
         TransitionManager.beginDelayedTransition(containerView, new ChangeTransform().setDuration(2000));
         rocketView.setTranslationY(-containerView.getHeight());
         rocketView.setRotationY(180);
+    }
+
+    private void startAnimationViaObjectAnimator() {
+        // TODO: Implement via ObjectAnimator
     }
 
     private void resetAnimation() {
